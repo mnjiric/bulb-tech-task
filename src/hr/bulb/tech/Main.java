@@ -24,9 +24,9 @@ public class Main {
         final Thread shuffleWords = new Thread(() -> shuffleWords(text1));
         final Thread shuffleCharacters = new Thread(() -> shuffleCharacters(text1));
 
-        shuffleCharacters.start();
         shuffleSentences.start();
         shuffleWords.start();
+        shuffleCharacters.start();
 
         shuffleSentences.join();
         shuffleWords.join();
